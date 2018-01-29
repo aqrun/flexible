@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script type="text/javascript">!function(e,t,i){var a,r=e.document,n=r.documentElement,o=r.querySelector('meta[name="viewport"]'),m=r.querySelector('meta[name="flexible"]'),l=0,s=0,d=t.flexible||(t.flexible={});if(o){console.warn("set zoom ratio by existing meta tag");var p=o.getAttribute("content").match(/initial\-scale=([\d\.]+)/);p&&(s=parseFloat(p[1]),l=parseInt(1/s))}else if(m){var c=m.getAttribute("content");if(c){var u=c.match(/initial\-dpr=([\d\.]+)/),f=c.match(/maximum\-dpr=([\d\.]+)/);u&&(l=parseFloat(u[1]),s=parseFloat((1/l).toFixed(2))),f&&(l=parseFloat(f[1]),s=parseFloat((1/l).toFixed(2)))}}if(!l&&!s){e.navigator.appVersion.match(/android/gi);var v=e.navigator.appVersion.match(/iphone/gi),h=e.devicePixelRatio;s=1/(l=v?h>=3&&(!l||l>=3)?3:h>=2&&(!l||l>=2)?2:1:1)}if(n.setAttribute("data-dpr",l),!o)if((o=r.createElement("meta")).setAttribute("name","viewport"),o.setAttribute("content","initial-scale="+s+", maximum-scale="+s+", minimum-scale="+s+", user-scalable=no"),n.firstElementChild)n.firstElementChild.appendChild(o);else{var x=r.createElement("div");x.appendChild(o),r.write(x.innerHTML)}function g(){var t=n.getBoundingClientRect().width;t/l>i&&(t=i*l);var a=100*t/i;n.style.fontSize=a+"px",d.rem=e.rem=a}e.addEventListener("resize",function(){clearTimeout(a),a=setTimeout(g,300)},!1),e.addEventListener("pageshow",function(e){e.persisted&&(clearTimeout(a),a=setTimeout(g,300))},!1),g(),d.dpr=e.dpr=l,d.refreshRem=g,d.rem2px=function(e){var t=parseFloat(e)*this.rem;return"string"==typeof e&&e.match(/rem$/)&&(t+="px"),t},d.px2rem=function(e){var t=parseFloat(e)/this.rem;return"string"==typeof e&&e.match(/px$/)&&(t+="rem"),t}}(window,window.lib||(window.lib={}),1200);</script>
+    <style>
+        *{margin:0;padding:0;}
+        .main{
+            width:11rem;
+            margin:50px auto 0 auto;
+            height:30px;
+            background:#ccc;
+            margin-top:20px;
+            text-align: center;
+        }
+        body{font-size:14px;}
+    </style>
+</head>
+<body>
+    
+    <div class="main" >内容区</div>
+
+</body>
+</html>
